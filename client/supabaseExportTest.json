@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "game": "Sonic 1",
+    "review": "a very good game - timeless classic"
+  },
+  {
+    "id": 3,
+    "game": "Sonic 2",
+    "review": "a very good game - even better than the first"
+  },
+  {
+    "id": 4,
+    "game": "Sonic 3",
+    "review": "a very good game - almost as good as the 2nd"
+  },
+  {
+    "id": 5,
+    "game": "Sonic & Knuckles",
+    "review": "a fabulous add on to Sonic 3"
+  },
+  {
+    "id": 6,
+    "game": "Sonic 3D",
+    "review": "I dont like this one, bring back the old school Sonics"
+  }
+]
