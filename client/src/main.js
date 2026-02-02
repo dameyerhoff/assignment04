@@ -12,7 +12,7 @@ const myDatabaseDisplay = document.getElementById("databaseDisplay");
 // fetch my table from the supabase database, convert back into js
 async function fetchTable() {
   const jsTable = await fetch(
-    "https://assignment04-client.onrender.com/reviews",
+    "https://assignment04-server.onrender.com/reviews",
   );
   const readableTable = await jsTable.json();
 
@@ -58,7 +58,7 @@ async function handleSubmit(e) {
 
   // now we need to make a template for the sending of this data. think of this step as opening up the road between client and server (so the postman can now travel freely to/from the address), writing out the address on the envelope, like you would when sending a letter. and putting all the information inside the letter. a fetch command directed at the server (at this end) by default makes a get request (at the server end) triggering the get response from the server, but we also give a second argument with the fetch/get request (the data we now want to send in json format - jsonFormatData) this then tells our server to understand this is a get/post request.
   const serverPostResp = await fetch(
-    "https://assignment04-client.onrender.com/reviews",
+    "https://assignment04-server.onrender.com/reviews",
     {
       headers: {
         "Content-Type": "application/json",
