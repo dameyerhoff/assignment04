@@ -55,13 +55,16 @@ async function handleSubmit(e) {
   //console.log(jsFormData, jsonFormData); // you will see the js format of the form data and the json version.
 
   // now we need to make a template for the sending of this data. think of this step as opening up the road between client and server (so the postman can now travel freely to/from the address), writing out the address on the envelope, like you would when sending a letter. and putting all the information inside the letter. a fetch command directed at the server (at this end) by default makes a get request (at the server end) triggering the get response from the server, but we also give a second argument with the fetch/get request (the data we now want to send in json format - jsonFormatData) this then tells our server to understand this is a get/post request.
-  const serverPostResp = await fetch("http://localhost:4242/reviews", {
-    headers: {
-      "Content-Type": "application/json",
+  const serverPostResp = await fetch(
+    "https://assignment04-client.onrender.com/reviews",
+    {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: jsonFormData,
     },
-    method: "POST",
-    body: jsonFormData,
-  });
+  );
   // window.location.reload() not sure what this is for ????
   const res = await serverPostResp.json();
   console.log(res); // remember we asked the server, when it receives a get/post request, to send the client back a console.log response displaying the BODY content of the data it just received. res.json({ message: req.body }); So it shows us the actual users inputted text (which we made the body in json format above)
