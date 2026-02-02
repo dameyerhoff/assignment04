@@ -1,8 +1,5 @@
 //console.log("hello world");
 
-// link submit audio clip to javascript
-const segaAudio = new Audio("client/src/audio/sega-hd.mp3");
-
 // get our form
 const form = document.getElementById("form");
 
@@ -43,7 +40,6 @@ async function handleSubmit(e) {
   // stop defualt behaviour - which is the form resubmited after pressing submit. This was a built in feature of how forms were made  to perform back in the day. It had reasons which we will cover, and is still kept in for backwards compatability of old websites, but for now just disable it. If you dont, the console.log will momentarily display the result and then it disables/disappears again after an auto re-submit.
   //e.preventDefault(); //take this out again to allow the database to refresh
   alert("Review Submitted! Thanks!");
-  segaAudio.play();
 
   // horrible line of code - to make an instance of the user's FormData submitted and make it readable to js. First save any new submitted form data as a named insance. I will call it rawFormData. If you console log rawFormData at this stage you will see it is retuned as simply FormData (unless you are using Firefox browser, in which case it apparently does translate it).
   const rawFormData = new FormData(form);
