@@ -11,7 +11,9 @@ const myDatabaseDisplay = document.getElementById("databaseDisplay");
 
 // fetch my table from the supabase database, convert back into js
 async function fetchTable() {
-  const jsTable = await fetch("http://localhost:4242/reviews");
+  const jsTable = await fetch(
+    "https://assignment04-client.onrender.com/reviews",
+  );
   const readableTable = await jsTable.json();
 
   //console.log(readableTable); // check it has found the table array and translated it back into js
